@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Exercicio2</string>
+    <string name="form_nome">Nome Completo</string>
+    <string name="form_user">Usuario</string>
+    <string name="form_senha">Senha</string>
+    <string name="form_btn_cedastrar">Cadastrar</string>
+
+</resources>

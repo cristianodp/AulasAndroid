@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="bloco_array">
+        <item>Selecione o bloco</item>
+        <item>ANDROID</item>
+        <item>IOS</item>
+        <item>.NET</item>
+        <item>IONIC</item>
+    </string-array>
+
+</resources>
