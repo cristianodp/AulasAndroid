@@ -20,7 +20,7 @@ public interface PacoteService {
 
 
     @GET("/ofertas_busca.php")
-    void getPacotes(@Query("q") String q, @Query("numprods") int qtdPacotes, Callback<Call<List<Pacote>>> callback);
+    Call<List<Pacote>> getPacotes2(@Query("q") String q, @Query("numprods") int qtdPacotes);
 
 
 
