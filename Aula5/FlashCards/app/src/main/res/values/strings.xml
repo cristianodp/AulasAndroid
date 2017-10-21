@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ExemploRetrofit</string>
+    <string name="base_url">http://infnet.000webhostapp.com</string>
+</resources>

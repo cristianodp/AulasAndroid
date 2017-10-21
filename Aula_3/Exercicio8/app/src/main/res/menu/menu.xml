@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/btn_adicionar"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Adicionar"
+        tools:ignore="AppCompatResource"
+        />
+    <item
+        android:id="@+id/btn_remover"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="Remover"
+        tools:ignore="AppCompatResource"
+        />
+</menu>
