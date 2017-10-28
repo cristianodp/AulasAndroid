@@ -1,10 +1,15 @@
 package com.raywenderlich.adaptiveweather;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.DrawableUtils;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.google.android.flexbox.FlexboxLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,12 +44,29 @@ public class MainActivity extends AppCompatActivity {
       @Override
       public void onItemClick(Location location) {
         // TODO
+          loadForcast(location.getForecast());
       }
     });
     mRecyclerView.setAdapter(mLocationAdapter);
+
+      if (savedInstanceState != null) {
+
+         try {
+             int idx = savedInstanceState.getInt("ItemSelected");
+             mLocationAdapter.setSelectedLocationIndex(idx);
+         }catch (Exception e){
+
+         }
+      }
   }
 
-  private void loadData() {
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt ("ItemSelected", mLocationAdapter.getSelectedLocationIndex());
+    }
+
+    private void loadData() {
     String json = null;
     try {
       InputStream is = getAssets().open("data.json");
@@ -77,4 +99,39 @@ public class MainActivity extends AppCompatActivity {
       }
     }
   }
+
+  private Drawable mapWeatherToDrawable(String forcast){
+
+    int drawableId = 0;
+
+    switch (forcast){
+      case "sun": drawableId = R.drawable.ic_sun;
+      break;
+      case "cloud": drawableId = R.drawable.ic_cloud;
+        break;
+      case "fog": drawableId = R.drawable.ic_fog;
+        break;
+      case "rain": drawableId = R.drawable.ic_rain;
+        break;
+      case "snow": drawableId = R.drawable.ic_snow;
+        break;
+      case "thunder": drawableId = R.drawable.ic_thunder;
+        break;
+    }
+
+    return getResources().getDrawable(drawableId);
+  }
+
+  private void loadForcast(List<String> forcast){
+
+      FlexboxLayout forcastView = (FlexboxLayout) findViewById(R.id.forecast);
+
+      for (int i=0; i < forcastView.getChildCount() ; i++ ){
+
+          AppCompatImageView dayView = (AppCompatImageView) forcastView.getChildAt(i);
+          dayView.setImageDrawable(mapWeatherToDrawable(forcast.get(i)));
+
+      }
+  }
+
 }

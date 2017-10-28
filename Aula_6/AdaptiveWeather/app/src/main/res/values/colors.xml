@@ -3,4 +3,5 @@
   <color name="color_primary">#9B26AF</color>
   <color name="color_primary_dark">#89229b</color>
   <color name="text_color_primary">#ffffff</color>
+  <color name="forcast_background">#18a2f7</color>
 </resources>
