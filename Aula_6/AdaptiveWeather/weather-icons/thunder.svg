@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="245px" height="225px" viewBox="0 0 245 225" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>thunder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1024" transform="translate(-43.000000, -738.000000)">
+            <g id="thunder" transform="translate(43.000000, 738.000000)">
+                <g id="cloud-copy" fill-opacity="0.9" fill="#FFFFFF">
+                    <path d="M170,150 C211.421356,150 245,116.421356 245,75 C245,33.5786438 211.421356,0 170,0 C134.027744,0 103.970465,25.325024 96.6847609,59.1184728 C86.598595,47.4116586 71.6648403,40 55,40 C24.6243388,40 0,64.6243388 0,95 C0,125.375661 24.6243388,150 55,150 L170,150 Z" id="Combined-Shape-Copy"></path>
+                </g>
+                <polygon id="Path-2" fill="#FFCA28" points="94.9082031 150 88 184.949219 110.105469 184.949219 88 224.826172 134.0625 174.207031 107.021484 174.207031 128.005859 150"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
